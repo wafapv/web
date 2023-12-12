@@ -1,0 +1,127 @@
+<html>
+<title>
+	forum
+	</title><center>
+	<head>
+		<h1><font color="red">Registration Forum</font></h1>
+		<br>
+		<br>
+
+	</head>
+	<style>
+h1 {
+  color: hotpink ;
+  font-size: 300%;
+ 
+}
+ button {
+        display: inline-block;
+        background-color: red;
+        border-radius: 10px;
+        border: 4px double #cccccc;
+        color: #ffffff;
+        text-align: center;
+        font-size: 10px;
+        padding: 10px;
+        width: 70px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+      }
+      button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+      }
+      button span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+      }
+      button:hover {
+        background-color: #f7c2f9;
+      }
+      button:hover span {
+        padding-right: 25px;
+      }
+      button:hover span:after {
+        opacity: 1;
+        right: 0;
+      }
+</style>
+	<body bgcolor="#99ff99">
+		<div style="background-color: #9999ff;color:white;padding:20px;">
+
+	<form style="border:1px;solid #000;background-color: #e6b3ff; text-align:center;padding:20px;width:500px; border-radius:10px;">
+		<lable>
+			Name &nbsp &nbsp &nbsp 
+		</lable>
+		<input type="text" size="20"><br>
+		<lable>
+			Address &nbsp 
+		</lable>
+		<textarea id="adress" name="adress" rows="5" cols="21">
+		</textarea><br>
+		<lable>
+			Age &nbsp &nbsp &nbsp  &nbsp
+		</lable>
+		<input type="number" size="20"><br>
+		<lable>
+			Dob &nbsp &nbsp &nbsp &nbsp 
+		</lable>
+		<input type="date" size="20"><br>
+		<lable>
+			Email &nbsp &nbsp &nbsp 
+		</lable>
+		<input type="email" value="email" name="email" size="20"><br>
+		<lable>
+			Password
+		</lable>
+		<input type="password" value="password"><br>
+		<br>
+		<lable>
+			Gender
+		</lable>
+		<input type="radio" name="radio">m
+		<input type="radio" name="radio">f
+		<input type="radio" name="radio">others
+		<br>
+		<br>
+		<lable>
+			educational qualification
+		</lable>
+		<select>
+			<option>bca</option>
+			<option>bsc</option>
+			<option>physics</option>
+			<option>maths</option>
+			<option>bcom</option>
+		</select><br>
+		<br>
+		<lable>
+			lang known
+		</lable>
+		<input type="checkbox">english
+		<input type="checkbox">malayalam
+		<input type="checkbox">hindi
+		<input type="checkbox">tamil
+        <br>
+        <br>
+
+        <lable>
+			upload photo
+		</lable>
+		<input type="file"><br>
+		<button type="button">Submit</button>
+		<button type="button" value="clear">reset</button>
+
+	</form>
+</div>
+</center>
+</body>
+	</html>
+

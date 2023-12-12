@@ -1,0 +1,16 @@
+
+<html>
+<head>
+  <title>Mouseover Image and Text</title>
+  <script>
+    function changeImage() {
+      document.getElementById("myImage").src = "img2.png";
+      document.getElementById("myText").innerHTML = "New text";
+    }
+  </script>
+</head>
+<body>
+  <img id="myImage" src="IMG.png" onmouseover="changeImage()" width="300px", height="500px" />
+  <p id="myText">Old text</p>
+</body>
+</html>

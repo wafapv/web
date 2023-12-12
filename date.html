@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Calendar Generator</h2>
+
+<p>Enter a year:</p>
+
+<input type="text" id="year" name="year">
+<button onclick="Calendar()">Generate Calendar</button>
+
+<p id="calendar"></p>
+
+<script>
+function Calendar() {
+    var year = document.getElementById("year").value;
+    var calendar = "";
+    for (var month = 0; month < 12; month++) {
+        calendar += "<h3>" + new Date(year, month).toLocaleString('default', { month: 'long' }) + "</h3>";
+        calendar += "<table border='1'><tr><th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th></tr>";
+        var firstDay = new Date(year, month, 1).getDay();
+        var daysInMonth = 32 - new Date(year, month, 32).getDate();
+        var date = 1;
+        for (var i = 0; i < 6; i++) {
+            calendar += "<tr>";
+            for (var j = 0; j < 7; j++) {
+                if (i === 0 && j < firstDay || date > daysInMonth) {
+                    calendar += "<td></td>";
+                } else {
+                    calendar += "<td>" + date + "</td>";
+                    date++;
+                }
+            }
+            calendar += "</tr>";
+        }
+        calendar += "</table>";
+    }
+    document.getElementById("calendar").innerHTML = calendar;
+}
+</script>
+
+</body>
+</html>
